@@ -1,0 +1,108 @@
+/* ******************************************************************* */
+
+
+/* Styling for Grid Layout */
+
+.Grid{
+    display: flex;
+   
+    gap: 1rem;
+    width: 100%;
+    /* border: 2px solid red; */
+    flex-direction: column;
+    
+
+
+    
+
+}
+
+header{
+    
+    width: 100%;
+}
+nav{
+    
+    width: fit-content;
+}
+
+.Cards {
+    /* border: 2px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 1rem;
+}
+
+
+
+
+/* **********************************************(**************************************** */
+
+/* styling for app main layout  */
+
+
+.Main{
+    display: flex;
+    align-items: top;
+    gap: 1rem;
+}
+
+
+/* ****************************************************************** */
+
+
+/* Stylign for Demos Container  */
+
+.Demos-Container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    
+}
+.sales-report-demo{
+    grid-column: span 2;
+}
+
+@media all and (max-width: 768px){
+    .Cards {
+        
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+    .Demos-Container {
+       
+        grid-template-columns: repeat(2, 1fr);
+        
+        
+    }
+    nav{
+    
+        width: fit-content;
+        height: 97vh;
+        position: sticky;
+        top: 1rem;
+    }
+    #inventory-container{
+
+        gap: 1rem;
+    }
+}
+
+@media all and (max-width: 648px){
+    #inventory-container{
+        grid-column: span 1;
+        gap: 1rem;
+    }
+    nav{
+        display: none;
+    }
+    
+}
+
+@media all and (max-width: 540px){
+    #inventory-container{
+        grid-column: span 2;
+        gap: 1rem;
+    }
+}
